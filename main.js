@@ -1,34 +1,14 @@
-
+// Codigo para calcular puntos squad
 function calcular () 
 {
-    var vacation=document.getElementById("vacation").value;
-    var weekday=parseInt(document.getElementById("day").value);
-    
-    var isVacation = false;
-    var isWeekday = false;
-    
-    var salida = document.getElementById("salida");
+	var puntosSquad=document.getElementById("puntosSquad").value;
+	var puntosMaximo=document.getElementById("puntosMaximo").value;
+	var porcentajeSquad=(100*puntosSquad)/puntosMaximo;
 
-    if (vacation == "1") {
-        isVacation = true;
-    }
-
-    if (weekday < 6){
-        isWeekday = true;
-    }
-
-    if (isVacation)
-    {
-        //dormir
-        salida.innerHTML = "1";
-
-    }else{
-         if (isWeekday)
-         {
-            salida.innerHTML = "0";
-         }else {
-            salida.innerHTML = "1";
-         }   
-        }
+	if (porcentajeSquad>=80)
+	{
+		document.getElementById("salida").innerHTML="Muy bien Squad!";
+	}else{
+		document.getElementById("salida").innerHTML="Pueden hacerlo mejor.";
+	}
 }
-
