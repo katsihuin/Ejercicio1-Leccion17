@@ -6,8 +6,7 @@
 
 - puntosSquad
 - puntosMaximo
-- resultado
-- porcentaje
+- porcentajeSquad
 
 ##Ingreso de Datos
 
@@ -16,7 +15,8 @@
 
 ##Proceso
 
-- si el porcentaje obtenido es menor o igual que 80%, almacenar en variable porcentaje "Muy bien Squad"
+- Calcular porcentaje del squad: (100 * puntosSquad)/puntosMaximo y guardarlo en porcentajeSquad
+- si el porcentajeSquad obtenido es mayor o igual que 80%, mostrar mensaje "Muy bien Squad!" sino mostrar mensaje: "Pueden hacerlo mejor."
 
 ## Mostrar Resultados
 
