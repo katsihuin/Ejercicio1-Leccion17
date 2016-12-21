@@ -1,26 +1,34 @@
-var puntosSquad = document.getElementById("puntosSquad");
-var puntosMaximo = document.getElementById("puntosMaximo");
-var divSalida = document.getElementById("salida");
-var resultado = (puntosSquad/maxPuntos);
-var porcentaje =(resultado *100);
 
-
-
-function alcanzoPromedio(puntosSquad, maxPuntos) {
-	var valorResultado = resultado.value;
-	var valorPorcentaje = porcentaje.value;
+function calcular () 
+{
+    var vacation=document.getElementById("vacation").value;
+    var weekday=parseInt(document.getElementById("day").value);
     
-        if (porcentaje >=80){
-            porcentaje = "Muy bien squad!";
-            return porcentaje;
-            	//Si no es verdad hace esto
-			salida.innerHTML = "0.00";
-			document.getElementById("mensajes").innerHTML = '<div class="alert alert-danger">No se ingresaron valores</div>';
+    var isVacation = false;
+    var isWeekday = false;
+    
+    var salida = document.getElementById("salida");
 
-        }else{
-            porcentaje = "Pueden hacerlo mejor.";
-            return porcentaje;
-        }            
+    if (vacation == "1") {
+        isVacation = true;
+    }
+
+    if (weekday < 6){
+        isWeekday = true;
+    }
+
+    if (isVacation)
+    {
+        //dormir
+        salida.innerHTML = "1";
+
+    }else{
+         if (isWeekday)
+         {
+            salida.innerHTML = "0";
+         }else {
+            salida.innerHTML = "1";
+         }   
+        }
 }
 
-	
